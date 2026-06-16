@@ -6,7 +6,7 @@ import "../styles/global.css";
         <a class="linea" href="/">Inicio</a>
         <a class="linea" href="/estudios/">Estudios</a>
         <a class="linea" href="/practicas/">Prácticas</a>
-        <a href="/contacto/">Contacto</a>
+        <a class="linea" href="/contacto/">Contacto</a>
       </nav>
 
 
@@ -19,9 +19,16 @@ import "../styles/global.css";
     }
     .linea{
         border-right: 1px solid black;
+        margin-right: 10px;
+    }
+    a {
+        transition: all 0.5s ease;
     }
     a:hover{
-        background-color: burlywood;
+        background-color: rgba(177, 173, 168, 0.7);
+        box-shadow: 0 0 15px rgba(177, 173, 168, 1);
+        border-radius: 12px;
     }
+    
     
   </style>
