@@ -66,6 +66,17 @@ h1,h2,p{
     font-weight: bold;
 }
 
+.container-contacto{
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
 html.dark {
   background-color: #002d47;
   color: #fff;
@@ -77,5 +88,7 @@ body.dark{
 .dark a {
   color: #fff;
 }
+
+
 
 

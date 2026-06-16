@@ -1,2 +1,17 @@
+---
+import LayoutBasico from '../layouts/LayoutBasico.astro';
+import Contacto from '../components/Contacto.astro';
+import "../styles/global.css";
+const pageTitle = "CV Alejandro";
+---
 
+<LayoutBasico pageTitle={pageTitle}>
+
+    <h1 class="titulos">CONTACTO</h1>
+    <div class="container-contacto">
+        <Contacto />
+    </div>
+
+    <hr>
+</LayoutBasico>
     
