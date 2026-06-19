@@ -1,16 +1,17 @@
 ---
 import LayoutBasico from "../layouts/LayoutBasico.astro";
 import Contactos from "../components/Contacto.astro";
-import "../styles/global.css";
 const pageTitle = "CV Alejandro";
 const titleClass =
     "mx-2.5 my-[15px] w-full max-w-[1200px] px-5 text-center text-[clamp(1.5rem,4vw,2rem)] uppercase text-black transition-colors duration-300 sm:mx-auto sm:my-5 dark:text-white";
 ---
 
 <LayoutBasico pageTitle={pageTitle}>
-    <h1 class="titulos">CONTACTO</h1>
-    <div class="container-contacto">
+    <h1 class={titleClass}>CONTACTO</h1>
+    <div class="mb-[50px] text-center">
         <Contactos />
     </div>
-    <hr />
+    <hr
+        class="mx-5 my-[30px] border-0 border-t border-black transition-colors duration-300 dark:border-white"
+    />
 </LayoutBasico>

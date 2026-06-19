@@ -1,6 +1,5 @@
 ---
 import LayoutBasico from "../layouts/LayoutBasico.astro";
-import "../styles/global.css";
 const pageTitle = "CV Alejandro";
 const titleClass =
     "mx-2.5 my-[15px] w-full max-w-[1200px] px-5 text-center text-[clamp(1.5rem,4vw,2rem)] uppercase text-black transition-colors duration-300 sm:mx-auto sm:my-5 dark:text-white";
@@ -11,26 +10,29 @@ const textClass =
 ---
 
 <LayoutBasico pageTitle={pageTitle}>
-    <h1 class="titulos">EXPERIENCIA PROFESIONAL</h1>
-    <div>
-        <div class="educacion">
-            <h2 class="negrita estudio">
+    <h1 class={titleClass}>EXPERIENCIA PROFESIONAL</h1>
+    <div class="text-center">
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>
                 UNED - Desarrollador Web (Prácticas FCT)
             </h2>
-            <p>Madrid | 2024 - 2025</p>
+            <p class={textClass}>Madrid | 2024 - 2025</p>
         </div>
-        <div class="educacion">
-            <h2 class="negrita estudio">
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>
                 DataSystem - Técnico Web / Contenidos (Prácticas FCT)
             </h2>
-            <p>Madrid | 2023 - 2024</p>
+            <p class={textClass}>Madrid | 2023 - 2024</p>
         </div>
-        <div class="educacion">
-            <h2 class="negrita estudio">
+
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>
                 Indra Sistemas - Técnico Informático (Prácticas FCT)
             </h2>
-            <p>Madrid | 2020 - 2021</p>
+            <p class={textClass}>Madrid | 2020 - 2021</p>
         </div>
     </div>
-    <hr />
+    <hr
+        class="mx-5 my-[30px] border-0 border-t border-black transition-colors duration-300 dark:border-white"
+    />
 </LayoutBasico>

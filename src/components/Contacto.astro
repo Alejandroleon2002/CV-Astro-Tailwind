@@ -4,24 +4,15 @@ import GitHubIcon from "./Icons/GitHubIcon.astro";
 import LinkedInIcon from "./Icons/LinkedInIcon.astro";
 ---
 
-<style>
-    footer {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-</style>
-
-<footer>
-    <div>
+<footer class="flex justify-center gap-4 mt-8">
+    <div class="text-center">
         <ContenedorContacto
             plataforma="github"
             usuario="Alejandroleon2002"
             Icon={GitHubIcon}
         />
     </div>
-    <div>
+    <div class="text-center">
         <ContenedorContacto
             plataforma="linkedin"
             usuario="in/alejandro-león-manzanedo"

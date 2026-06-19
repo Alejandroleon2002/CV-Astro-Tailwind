@@ -1,11 +1,12 @@
 ---
-import "../styles/global.css";
 import Navigation from "./Navigation.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 import { Image } from "astro:assets";
 ---
 
-<header class="cabecera">
+<header
+  class="mx-auto flex max-w-[1200px] flex-col flex-wrap items-center justify-between gap-5 p-2 md:flex-row md:p-3"
+>
   <Navigation />
   <Image
     class="h-20 w-20 rounded-full bg-[#E1DCC9] dark:bg-[#002d47] dark:invert dark:hue-rotate-180 min-[480px]:h-[100px] min-[480px]:w-[100px] md:h-[120px] md:w-[120px]"

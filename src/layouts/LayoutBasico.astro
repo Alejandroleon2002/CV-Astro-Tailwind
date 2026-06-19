@@ -5,7 +5,10 @@ import "../styles/global.css";
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="es">
+<html
+  lang="es"
+  class="scroll-smooth bg-[#E1DCC9] font-sans text-black dark:bg-[#002d47] dark:text-white"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -21,6 +24,7 @@ const { pageTitle } = Astro.props;
     >
       CV Alejandro León Manzanedo
     </h1>
+
     <Header />
     <slot />
     <Footer />

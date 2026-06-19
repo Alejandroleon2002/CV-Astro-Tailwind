@@ -1,6 +1,5 @@
 ---
 import LayoutBasico from "../layouts/LayoutBasico.astro";
-import "../styles/global.css";
 const pageTitle = "CV Alejandro";
 const titleClass =
     "mx-2.5 my-[15px] w-full max-w-[1200px] px-5 text-center text-[clamp(1.5rem,4vw,2rem)] uppercase text-black transition-colors duration-300 sm:mx-auto sm:my-5 dark:text-white";
@@ -9,14 +8,14 @@ const textClass =
 ---
 
 <LayoutBasico pageTitle={pageTitle}>
-    <h1 class="titulos">¿Quien soy?</h1>
-    <p>
+    <h1 class={titleClass}>¿Quien soy?</h1>
+    <p class={textClass}>
         Soy Alejandro, una persona apasionada por la tecnología y el desarrollo
         de software. Me gusta aprender nuevas herramientas y enfrentarme a retos
         que me permitan mejorar mis habilidades de programación. Destaco por mi
         capacidad de aprendizaje, trabajo en equipo y resolución de problemas.
     </p>
-    <p>
+    <p class={textClass}>
         Desarrollador Web Junior especializado en HTML, CSS, JAVA, PHP,
         JavaScript y bases de datos MySQL. Actualmente continúo ampliando mis
         conocimientos en desarrollo web, arquitectura MVC y consumo de APIs,
@@ -24,27 +23,29 @@ const textClass =
         como backend.
     </p>
 
-    <div>
-        <h1 class="titulos">Tecnologías</h1>
-        <ul>
+    <div class="text-center">
+        <h1 class={titleClass}>Tecnologías</h1>
+        <ul class={textClass}>
             <li>
-                <span class="negrita">Frontend:</span> HTML5, CSS3, JavaScript
+                <span class="font-bold">Frontend:</span> HTML5, CSS3, JavaScript
             </li>
-            <li><span class="negrita">Backend:</span> PHP, Java</li>
+            <li><span class="font-bold">Backend:</span> PHP, Java</li>
             <li>
-                <span class="negrita">Bases de Datos:</span> MySQL, HSQLDB, MariaDB
-            </li>
-            <li>
-                <span class="negrita">Control de Versiones:</span> Git, GitHub
+                <span class="font-bold">Bases de Datos:</span> MySQL, HSQLDB, MariaDB
             </li>
             <li>
-                <span class="negrita">Herramientas:</span> XAMPP, Visual Studio
+                <span class="font-bold">Control de Versiones:</span> Git, GitHub
             </li>
             <li>
-                <span class="negrita">Arquitecturas y Metodologías:</span> MVC, APIs
-                REST
+                <span class="font-bold">Herramientas:</span> XAMPP, Visual Studio
+            </li>
+            <li>
+                <span class="font-bold">Arquitecturas y Metodologías:</span> MVC,
+                APIs REST
             </li>
         </ul>
     </div>
-    <hr />
+    <hr
+        class="mx-5 my-[30px] border-0 border-t border-black transition-colors duration-300 dark:border-white"
+    />
 </LayoutBasico>

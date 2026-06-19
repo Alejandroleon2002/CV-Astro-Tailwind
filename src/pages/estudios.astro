@@ -1,6 +1,5 @@
 ---
 import LayoutBasico from "../layouts/LayoutBasico.astro";
-import "../styles/global.css";
 const pageTitle = "CV Alejandro";
 const titleClass =
     "mx-2.5 my-[15px] w-full max-w-[1200px] px-5 text-center text-[clamp(1.5rem,4vw,2rem)] uppercase text-black transition-colors duration-300 sm:mx-auto sm:my-5 dark:text-white";
@@ -11,37 +10,43 @@ const textClass =
 ---
 
 <LayoutBasico pageTitle={pageTitle}>
-    <h1 class="titulos">EDUCACIÓN</h1>
-    <div>
-        <div class="educacion">
-            <h2 class="negrita estudio">Máster Desarrollador FullStack</h2>
-            <p>MasterD, Madrid | Actualmente</p>
+    <h1 class={titleClass}>EDUCACIÓN</h1>
+    <div class="text-center">
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>Máster Desarrollador FullStack</h2>
+            <p class={textClass}>MasterD, Madrid | Actualmente</p>
         </div>
-        <div class="educacion">
-            <h2 class="negrita estudio">
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>
                 Confección y Publicación de Páginas Web
             </h2>
-            <p>Core Networks, Madrid | Actualmente</p>
+            <p class={textClass}>Core Networks, Madrid | Actualmente</p>
         </div>
-        <div class="educacion">
-            <h2 class="negrita estudio">
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>
                 Grado Superior en Desarrollo de Aplicaciones Web (DAW)
             </h2>
-            <p>I.E.S. Enrique Tierno Galván, Madrid | 2024 - 2025</p>
+            <p class={textClass}>
+                I.E.S. Enrique Tierno Galván, Madrid | 2024 - 2025
+            </p>
         </div>
-        <div class="educacion">
-            <h2 class="negrita estudio">
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>
                 Grado Superior en Desarrollo de Aplicaciones Multiplataforma
                 (DAM)
             </h2>
-            <p>I.E.S. Enrique Tierno Galván, Madrid | 2022 - 2024</p>
+            <p class={textClass}>
+                I.E.S. Enrique Tierno Galván, Madrid | 2022 - 2024
+            </p>
         </div>
-        <div class="educacion">
-            <h2 class="negrita estudio">
+        <div class={itemClass}>
+            <h2 class={itemTitleClass}>
                 Grado Medio en Sistemas Microinformáticos y Redes (SMR)
             </h2>
-            <p>I.S.E.P. CEU, Madrid | 2019 - 2021</p>
+            <p class={textClass}>I.S.E.P. CEU, Madrid | 2019 - 2021</p>
         </div>
     </div>
-    <hr />
+    <hr
+        class="mx-5 my-[30px] border-0 border-t border-black transition-colors duration-300 dark:border-white"
+    />
 </LayoutBasico>

@@ -3,24 +3,8 @@ const { plataforma, usuario } = Astro.props;
 ---
 
 <a
+    class="inline-block rounded-[10px] bg-[#978F66] px-[1.3rem] py-[0.8rem] text-[clamp(0.9rem,2vw,1rem)] text-white no-underline transition-colors duration-300 hover:bg-[#7a6d52]"
     href={`https://www.${plataforma}.com/${usuario}`}
     target="_blank"
     rel="noopener noreferrer">{plataforma}</a
 >
-
-<style>
-    a {
-        padding: 0.8rem 1.3rem;
-        background-color: #978f66;
-        text-decoration: none;
-        border-radius: 10px;
-        color: white;
-        display: inline-block;
-        transition: background-color 0.3s ease;
-        font-size: clamp(0.9rem, 2vw, 1rem);
-    }
-
-    a:hover {
-        background-color: #7a6d52;
-    }
-</style>
