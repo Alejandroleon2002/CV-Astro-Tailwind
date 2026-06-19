@@ -3,8 +3,10 @@ const { plataforma, usuario, Icon } = Astro.props;
 ---
 
 <a
-    class="inline-flex items-center gap-3 rounded-[10px] bg-[#978F66] px-5 py-4 text-2xl text-white no-underline transition-all duration-[400ms] hover:rounded-[10px] hover:bg-[#978F66] hover:text-[2rem] hover:text-white hover:no-underline"
     href={`https://www.${plataforma}.com/${usuario}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-3 rounded-[10px] bg-[#978F66] px-5 py-4 text-2xl text-white no-underline transition-transform duration-400 ease-in-out hover:translate-y-[-10px]"
 >
     {Icon ? <Icon class="h-6 w-6 shrink-0 text-white" /> : null}
     {plataforma}

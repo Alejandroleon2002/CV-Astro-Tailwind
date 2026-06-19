@@ -1,9 +1,16 @@
 ---
 import Social from "./Social.astro";
+import InstagramIcon from "./Icons/InstagramIcon.astro";
+import TwitterIcon from "./Icons/TwitterIcon.astro";
+import YouTubeIcon from "./Icons/YouTubeIcon.astro";
 ---
 
 <footer class="mt-8 mb-8 flex justify-center gap-4">
-    <Social plataforma="youtube" usuario="@alejandroleon3042" />
-    <Social plataforma="twitter" usuario="" />
-    <Social plataforma="instagram" usuario="" />
+    <Social
+        plataforma="YouTube"
+        usuario="@alejandroleon3042"
+        Icon={YouTubeIcon}
+    />
+    <Social plataforma="Twitter" usuario="" Icon={TwitterIcon} />
+    <Social plataforma="Instagram" usuario="" Icon={InstagramIcon} />
 </footer>
