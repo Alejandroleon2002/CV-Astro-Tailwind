@@ -1,37 +1,34 @@
 ---
 import LayoutBasico from "../layouts/LayoutBasico.astro";
+import Timeline from "../components/Timeline.astro";
+import TimelineIconWork from "../components/Icons/TimelineIconWork.astro";
+
 const pageTitle = "CV Alejandro";
-const titleClass =
-    "mx-2.5 my-[15px] w-full max-w-[1200px] px-5 text-center text-[clamp(1.5rem,4vw,2rem)] uppercase text-black transition-colors duration-300 sm:mx-auto sm:my-5 dark:text-white";
-const itemClass = "my-[15px] flex flex-col text-center sm:my-5";
-const itemTitleClass = "text-center text-[clamp(1rem,2vw,1.3rem)] font-bold";
-const textClass =
-    "mx-auto my-2.5 w-full max-w-[1000px] px-[15px] text-center text-black transition-colors duration-300 sm:my-5 sm:px-5 dark:text-white";
+
+const experience = [
+    {
+        title: "UNED - Desarrollador Web (Prácticas FCT)",
+        place: "Madrid",
+        date: "2024 - 2025",
+    },
+    {
+        title: "DataSystem - Técnico Web / Contenidos (Prácticas FCT)",
+        place: "Madrid",
+        date: "2023 - 2024",
+    },
+    {
+        title: "Indra Sistemas - Técnico Informático (Prácticas FCT)",
+        place: "Madrid",
+        date: "2020 - 2021",
+    },
+];
 ---
 
 <LayoutBasico pageTitle={pageTitle}>
-    <h1 class={titleClass}>EXPERIENCIA PROFESIONAL</h1>
-    <div class="text-center">
-        <div class={itemClass}>
-            <h2 class={itemTitleClass}>
-                UNED - Desarrollador Web (Prácticas FCT)
-            </h2>
-            <p class={textClass}>Madrid | 2024 - 2025</p>
-        </div>
-        <div class={itemClass}>
-            <h2 class={itemTitleClass}>
-                DataSystem - Técnico Web / Contenidos (Prácticas FCT)
-            </h2>
-            <p class={textClass}>Madrid | 2023 - 2024</p>
-        </div>
+    <h1 class="text-center text-2xl font-bold my-8">EXPERIENCIA PROFESIONAL</h1>
 
-        <div class={itemClass}>
-            <h2 class={itemTitleClass}>
-                Indra Sistemas - Técnico Informático (Prácticas FCT)
-            </h2>
-            <p class={textClass}>Madrid | 2020 - 2021</p>
-        </div>
-    </div>
+    <Timeline items={experience} Icon={TimelineIconWork} />
+
     <hr
         class="mx-5 my-[30px] border-0 border-t border-black transition-colors duration-300 dark:border-white"
     />

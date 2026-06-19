@@ -17,7 +17,7 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body
-    class="page-enter flex min-h-screen w-full flex-col justify-center bg-[#E1DCC9] text-black transition-colors duration-300 dark:bg-[#002d47] dark:text-white"
+    class="min-h-screen w-full flex flex-col bg-[#E1DCC9] text-black transition-colors duration-300 dark:bg-[#002d47] dark:text-white"
   >
     <h1
       class="mx-2.5 my-5 text-center text-[clamp(2rem,5vw,3.6rem)] font-bold text-black transition-colors duration-300 sm:mx-5 sm:my-[30px] dark:text-white"
@@ -26,7 +26,32 @@ const { pageTitle } = Astro.props;
     </h1>
 
     <Header />
-    <slot />
+    <main class="mx-auto w-full max-w-[700px] px-5">
+      <slot />
+    </main>
     <Footer />
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 hidden flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#978F66] text-white shadow-lg transition-all hover:scale-110 active:scale-95"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M6 15l6 -6l6 6"></path>
+      </svg>
+    </button>
+
+    <script>
+      import "../scripts/scroll.js";
+    </script>
   </body>
 </html>

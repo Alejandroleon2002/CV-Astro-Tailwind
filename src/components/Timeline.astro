@@ -1,0 +1,41 @@
+---
+const { Icon } = Astro.props;
+
+type EducationItem = {
+  title: string;
+  place: string;
+  date: string;
+};
+
+const { items = [] } = Astro.props as {
+  items: EducationItem[];
+};
+---
+
+<ol class="relative border-s border-black/30 dark:border-white/30">
+  {items.map((item) => (
+    <li class="mb-10 ms-6 relative">
+
+      <!-- punto -->
+      <span class="absolute flex items-center justify-center w-6 h-6 bg-[#978F66] rounded-full -start-3 ring-8 ring-[#E1DCC9] dark:ring-[#002d47]">
+        {Icon ? <Icon class="h-6 w-6 shrink-0 text-white" /> : null}
+      </span>
+
+      <!-- fecha -->
+      <time class="ml-6 inline-block text-xs bg-black/10 dark:bg-white/10 px-6 py-1 rounded">
+        {item.date}
+      </time>
+
+      <!-- título -->
+      <h3 class="text-lg font-semibold mt-2 ml-6">
+        {item.title}
+      </h3>
+
+      <!-- lugar -->
+      <p class="text-sm opacity-80 ml-6">
+        {item.place}
+      </p>
+
+    </li>
+  ))}
+</ol>
